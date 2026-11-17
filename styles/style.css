@@ -1,5 +1,66 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h1{
-    text-decoration: underline;
-    font-size: 34px;
-    color:blue
+    /* key : value */
+   /* property : value */
+
+   font-size: 90px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   color: #e13131;
+
+   /* background property */
+   background-color:aquamarine;
+   /* background-image: url('../images/image1.png'); */
+
+   /* border */
+ border: 13px;
+ border-color: red;
+ border-style: double;
+
+ /* transition */;
+
+}
+
+/* h1:hover{
+    background-color: #0e0202;
+    transition: ease 2s;
+} */
+
+/* pseudo-classes */
+/* : */
+h1:hover{
+    color: blue;
+    background-color: #0e0202;
+}
+
+/* ul>li */
+/* ol>li */
+li:nth-child(odd){
+    color: red
+}
+
+/* pseudo-elements */
+/* :: */
+
+p::first-letter{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+p::first-line{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* group */
+
+h1,p{
+    color: blue;
+    background-color: aquamarine;
 }
