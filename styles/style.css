@@ -1,66 +1,111 @@
-/* universal selector */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 h1{
-    /* key : value */
-   /* property : value */
-
-   font-size: 90px;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   color: #e13131;
-
-   /* background property */
-   background-color:aquamarine;
-   /* background-image: url('../images/image1.png'); */
-
-   /* border */
- border: 13px;
- border-color: red;
- border-style: double;
-
- /* transition */;
+    color:red;
+    background-color:blue;
+    /* position : fixed;    */
+    position: sticky;
+    top:0
 
 }
+button:hover{
+    color:greenyellow;
+    background-color:lightgreen;
+    transition: font-size 6s ease-in-out, background-color 6s ease-in-out;
+    font-size: 100px;
+}
 
-/* h1:hover{
-    background-color: #0e0202;
-    transition: ease 2s;
+input:focus{
+    background-color: rgb(67, 16, 235);
+    color:white;
+}
+
+li:nth-child(even){
+    color: red;
+    background-color: yellow;
+    font-size: 40px;
+}
+/* p::first-letter{
+    color: red;
+    font-size: 40px;
 } */
 
-/* pseudo-classes */
-/* : */
-h1:hover{
-    color: blue;
-    background-color: #0e0202;
-}
-
-/* ul>li */
-/* ol>li */
-li:nth-child(odd){
-    color: red
-}
-
-/* pseudo-elements */
-/* :: */
-
-p::first-letter{
-    color: red;
-    font-size: 30px;
-    font-weight: bold;
-}
 p::first-line{
-    color: blue;
-    font-size: 20px;
-    font-weight: bold;
+    color: red;
+}
+h2::before{
+    content: "✨";
+}
+h2::after{
+    content: "✔";
 }
 
 
-/* group */
+@keyframes animate{
+    from{
+        color: red;
+        background-color: blue;
+        font-size: 20px;
+    }
+    to{
+        color: green;
+        background-color: yellow;
+        font-size: 50px;
+    }
+} 
+/* h2{
+    animation: animate 5s infinite alternate;
+} */
+/* 
+.parent{
+   height: 300px;
+   width: 200px;
+    border:2px solid red;
+    position:relative
 
-h1,p{
-    color: blue;
-    background-color: aquamarine;
+}
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    top:30px;
+} */
+
+
+/* .tick{
+     height: 50px;
+    width:50px;
+    border:2px solid blue;
+} */
+
+
+div{
+    /* height: 100px; */
+    width: auto;
+    border:2px solid rgb(21, 185, 48);
+    background-color: aqua;
+    /* position:absolute;
+    top:0;
+    z-index:-1; */
+    display : flex;
+    justify-content: space-around;
+
+}
+.div1{
+    border:2px solid black
+}
+.div2{
+    border:2px solid black
+}
+.div3{
+    border:2px solid black
+}
+
+@media(max-width: 500px){
+    div{
+        flex-direction: column;
+        background-color:blueviolet;
+        padding:20px;
+    }
+
 }
